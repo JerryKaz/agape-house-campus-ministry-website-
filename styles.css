@@ -259,7 +259,8 @@ nav a:hover::after {
 .hero {
     padding-top: 8rem;
     padding-bottom: 5rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+                url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -394,11 +395,29 @@ nav a:hover::after {
     align-items: center;
     justify-content: center;
     color: var(--white);
+    overflow: hidden;
+    position: relative;
+}
+
+.leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.leader-img:hover img {
+    transform: scale(1.05);
 }
 
 .leader-img i {
     font-size: 5rem;
     opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .leader-info {
@@ -496,11 +515,24 @@ nav a:hover::after {
     align-items: center;
     justify-content: center;
     color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.sermon-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .sermon-media i {
     font-size: 4rem;
     opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sermon-info {
@@ -586,34 +618,41 @@ nav a:hover::after {
     color: var(--primary-red);
 }
 
-/* Gallery */
+/* Gallery - Full Images Display */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .gallery-item {
-    height: 200px;
-    background: linear-gradient(135deg, var(--primary-purple), var(--accent));
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    transition: var(--transition);
-    overflow: hidden;
     position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background-color: var(--light-gray);
+    transition: var(--transition);
+    height: auto;
+    min-height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    object-fit: contain;
+    max-height: 400px;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.gallery-item i {
-    font-size: 3rem;
-    opacity: 0.8;
+.gallery-item:hover img {
+    transform: scale(1.03);
 }
 
 .gallery-overlay {
@@ -621,11 +660,28 @@ nav a:hover::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: var(--white);
-    padding: 0.5rem;
+    padding: 1.5rem 1rem 1rem;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item i {
+    font-size: 3rem;
+    opacity: 0.8;
+    color: var(--primary-purple);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Contact */
@@ -793,6 +849,10 @@ nav a:hover::after {
     .info-item {
         text-align: center;
     }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
@@ -853,6 +913,10 @@ nav a:hover::after {
         min-width: 100%;
         padding: 1rem;
     }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
@@ -870,5 +934,13 @@ nav a:hover::after {
     
     .hero-scripture {
         font-size: 1.2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item img {
+        max-height: 300px;
     }
 }
