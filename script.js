@@ -48,56 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission handling
-    const joinForm = document.getElementById('joinForm');
-    const contactForm = document.getElementById('contactForm');
-    
-    if (joinForm) {
-        joinForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const formData = {
-                name: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                programme: document.getElementById('programme').value,
-                year: document.getElementById('year').value,
-                message: document.getElementById('message').value
-            };
-            
-            // In a real application, you would send this data to a server
-            console.log('Join form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your interest in Agape House UPSA Campus Ministry! We will contact you soon.');
-            
-            // Reset form
-            joinForm.reset();
-        });
-    }
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const formData = {
-                name: document.getElementById('contactName').value,
-                email: document.getElementById('contactEmail').value,
-                message: document.getElementById('contactMessage').value
-            };
-            
-            // In a real application, you would send this data to a server
-            console.log('Contact form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your message! We will respond to you as soon as possible.');
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
-    
+ 
     // Scroll animations
     function checkScroll() {
         const fadeElements = document.querySelectorAll('.fade-in');
