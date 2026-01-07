@@ -1,693 +1,534 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MYRON DE LUXE - Experience the difference in quality. Premium fragrances and tech solutions in Ghana.">
-    <meta name="keywords" content="perfumes, tech solutions, Ghana, Accra, WhatsApp commerce, fragrance, web development, IT support">
-    <title>MYRON DE LUXE | Premium Fragrances & Tech Solutions</title>
-    
-    <!-- Fonts -->
+    <title>Agape House New Testament Church - UPSA Campus Ministry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="js/main.js" as="script">
-    <link rel="preload" href="css/main.css" as="style">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="MYRON DE LUXE | Premium Fragrances & Tech Solutions">
-    <meta property="og:description" content="Experience the difference in quality with premium fragrances and professional tech solutions in Ghana.">
-    <meta property="og:image" content="assets/images/social-preview.jpg">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MYRON DE LUXE | Premium Quality">
-    <meta name="twitter:description" content="Premium fragrances and innovative tech solutions in Ghana.">
-    <meta name="twitter:image" content="assets/images/twitter-preview.jpg">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-logo">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <path d="M30 5L55 20V40L30 55L5 40V20L30 5Z" stroke="var(--primary)" stroke-width="2"/>
-                    <path d="M30 20L40 25V35L30 40L20 35V25L30 20Z" fill="var(--primary)"/>
-                </svg>
-            </div>
-            <div class="loader-text">MYRON DE LUXE</div>
-            <div class="loader-progress">
-                <div class="progress-bar"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <!-- Logo -->
-            <a href="#home" class="nav-logo" data-aos="fade-down">
-                <div class="logo-mark">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M16 2L28 10V22L16 30L4 22V10L16 2Z" fill="var(--primary)"/>
-                        <path d="M16 12L22 15V19L16 22L10 19V15L16 12Z" fill="white"/>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-primary">MYRON</span>
-                    <span class="logo-secondary">DE LUXE</span>
-                </div>
-            </a>
-
-            <!-- Desktop Navigation -->
-            <div class="nav-menu">
-                <a href="#home" class="nav-link" data-scroll="home">
-                    <span class="nav-icon"><i class="fas fa-home"></i></span>
-                    <span class="nav-text">Home</span>
-                </a>
-                <a href="#fragrance" class="nav-link" data-scroll="fragrance">
-                    <span class="nav-icon"><i class="fas fa-spray-can-sparkles"></i></span>
-                    <span class="nav-text">Fragrances</span>
-                </a>
-                <a href="#tech" class="nav-link" data-scroll="tech">
-                    <span class="nav-icon"><i class="fas fa-microchip"></i></span>
-                    <span class="nav-text">Tech Solutions</span>
-                </a>
-                <a href="#contact" class="nav-link" data-scroll="contact">
-                    <span class="nav-icon"><i class="fas fa-headset"></i></span>
-                    <span class="nav-text">Contact</span>
-                </a>
-                <!-- Wishlist Icon -->
-                <a href="#fragrance" class="nav-link wishlist-link" data-scroll="fragrance" id="wishlistIcon">
-                    <span class="nav-icon">
-                        <i class="far fa-heart"></i>
-                        <span class="wishlist-count" id="wishlistCount"></span>
-                    </span>
-                    <span class="nav-text">Wishlist</span>
-                </a>
-        
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="toggle-line"></span>
-                <span class="toggle-line"></span>
-                <span class="toggle-line"></span>
-            </button>
-            
- <!-- shopping cart -->
-<a href="#" id="mobileCartIcon" class="mobile-nav-link">
-    <i class="fas fa-shopping-cart"></i><span id="mobileCartCount"></span>       
-        <span id="cartCount" class="cart-count"></span>
-    </a>
-            
-            <!-- Theme Toggle -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-content">
-                <a href="#home" class="mobile-nav-link" data-scroll="home">
-                    <i class="fas fa-home"></i> Home
-                </a>
-                <a href="#fragrance" class="mobile-nav-link" data-scroll="fragrance">
-                    <i class="fas fa-spray-can-sparkles"></i> Fragrances
-                </a>
-                <a href="#tech" class="mobile-nav-link" data-scroll="tech">
-                    <i class="fas fa-microchip"></i> Tech Solutions
-                </a>
-            
-                <a href="#fragrance" class="mobile-nav-link" data-scroll="fragrance" id="mobileWishlist">
-                    <i class="far fa-heart"></i> Wishlist
-                    <span class="mobile-wishlist-count" id="mobileWishlistCount"></span>
-                </a>
-                 <a href="#contact" class="mobile-nav-link" data-scroll="contact">
-                    <i class="fas fa-headset"></i> Contact
-                </a>
-<a href="#" id="mobileCartIcon" class="mobile-nav-link">
-    <i class="fas fa-shopping-cart"></i> Cart <span id="mobileCartCount"></span>
-
-                <div class="mobile-contact">
-                    <a href="https://wa.me/233550427241" class="whatsapp-btn mobile" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> Fragrances: +233550427241
-                    </a>
-                    <a href="https://wa.me/233208807036" class="whatsapp-btn mobile" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> Tech: +233208807036
-                    </a>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">✝</div>
+                <div>
+                    <div class="logo-text">Agape House NT Church</div>
+                    <div class="logo-subtext">UPSA Campus Ministry</div>
                 </div>
             </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#sermons">Sermons</a></li>
+                    <li><a href="#join">Join</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section" id="home">
-            <div class="hero-background">
-                <div class="particles" id="particles"></div>
-                <div class="gradient-overlay"></div>
-            </div>
-            
-            <div class="hero-container">
-                <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
-                    <h1 class="hero-title">
-                        <span class="title-line">Experience the</span>
-                        <span class="title-line highlight">difference in quality</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Premium fragrances and innovative tech solutions
+        <!-- Home Section -->
+        <section id="home" class="hero section">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-scripture">
+                        "For where two or three gather in my name, there am I with them." 
+                        <span class="scripture-ref">— Matthew 18:20</span>
+                    </div>
+                    
+                    <h1>Welcome to Agape House UPSA Campus Ministry</h1>
+                    
+                    <p class="hero-intro">
+                        A Christ-centred fellowship at the University of Professional Studies, Accra. 
+                        We nurture spiritual growth, foster genuine relationships, and equip students 
+                        to live out their faith on campus and beyond.
                     </p>
-                </div>
-
-                <!-- Path Selection -->
-                <div class="path-selection" data-aos="fade-up" data-aos-delay="200">
-                    <div class="path-grid">
-                        <!-- Fragrance Path -->
-                        <div class="path-card fragrance-path" data-path="fragrance">
-                            <div class="path-card-inner">
-                                <div class="path-icon">
-                                    <i class="fas fa-wind"></i>
-                                </div>
-                                <div class="path-content">
-                                    <h3 class="path-title">Fragrances</h3>
-                                    <p class="path-description">
-                                      
-                                    </p>
-                                    <div class="path-stats">
-                                        <div class="stat">
-                                            <i class="fas fa-box"></i>
-                                            <span>200+ Products</span>
-                                        </div>
-                                        <div class="stat">
-                                            <i class="fas fa-tag"></i>
-                                            <span>Clear Pricing</span>
-                                        </div>
-                                        <div class="stat">
-                                            <i class="fas fa-check-circle"></i>
-                                            <span>Real Stock</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="path-action-btn" data-action="fragrance">
-                                    Shop fragrances
-                                    <i class="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
-                            <div class="path-hover-effect"></div>
+                    
+                    <div class="service-info fade-in">
+                        <div class="info-item">
+                            <h3>Saturday Service</h3>
+                            <p>6:00 PM - 7:30 PM</p>
                         </div>
-
-                        <!-- Tech Solutions Path -->
-                        <div class="path-card tech-path" data-path="tech">
-                            <div class="path-card-inner">
-                                <div class="path-icon">
-                                    <i class="fas fa-laptop-code"></i>
-                                </div>
-                                <div class="path-content">
-                                    <h3 class="path-title">Tech Solutions</h3>
-                                    <p class="path-description">
-                                      
-                                    </p>
-                                    <div class="path-stats">
-                                        <div class="stat">
-                                            <i class="fas fa-cogs"></i>
-                                            <span>4 Core Services</span>
-                                        </div>
-                                        <div class="stat">
-                                            <i class="fas fa-headset"></i>
-                                            <span>Expert Support</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="path-action-btn" data-action="tech">
-                                    Explore Solutions
-                                    <i class="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
-                            <div class="path-hover-effect"></div>
+                        <div class="info-item">
+                            <h3>Midweek Fellowship</h3>
+                            <p>Wednesdays, 6:00 PM</p>
                         </div>
+                        <div class="info-item">
+                            <h3>Venue</h3>
+                            <p>UPSA Auditorium, Block C</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="#join" class="btn btn-primary">Join Our Fellowship</a>
+                        <a href="#services" class="btn btn-secondary">Service Times</a>
+                        <a href="#contact" class="btn btn-accent">Contact Us</a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Hero Stats -->
-                <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-card">
-                        <i class="fas fa-box-open"></i>
-                        <div class="stat-content">
-                            <h4>200+</h4>
-                            <p>Fragrance Products</p>
+        <!-- About Us Section -->
+        <section id="about" class="section section-light">
+            <div class="container">
+                <h2 class="text-center">About Our Ministry</h2>
+                
+                <div class="about-content">
+                    <div class="about-card fade-in">
+                        <h3><i class="fas fa-history"></i> Our History & Purpose</h3>
+                        <p>Founded in 2015, Agape House UPSA campus ministry provides a spiritual home for students, helping them grow in faith and character during their academic journey.</p>
+                    </div>
+                    
+                    <div class="about-card fade-in">
+                        <h3><i class="fas fa-eye"></i> Vision & Mission</h3>
+                        <p><strong>Vision:</strong> To see every UPSA student transformed by Christ's love and empowered to impact their world.</p>
+                        <p><strong>Mission:</strong> To disciple students through biblical teaching, authentic community, and practical service.</p>
+                    </div>
+                    
+                    <div class="about-card fade-in">
+                        <h3><i class="fas fa-heart"></i> Core Values</h3>
+                        <p>Biblical Authority, Christ-Centred Worship, Authentic Community, Servant Leadership, and Excellence in All Things.</p>
+                    </div>
+                    
+                    <div class="about-card fade-in">
+                        <h3><i class="fas fa-seedling"></i> Spiritual Growth</h3>
+                        <p>We provide spaces for prayer, Bible study, mentoring, and fellowship to help students develop a vibrant, resilient faith that lasts beyond campus life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="section section-dark">
+            <div class="container">
+                <h2 class="text-center">Our Leadership Team</h2>
+                
+                <div class="leaders-grid">
+                    <!-- Leader 1 -->
+                    <div class="leader-card fade-in">
+                        <div class="leader-img">
+                            <!-- ADD YOUR IMAGE HERE -->
+                             <img src="images/leaders/Pastor Elijah Sambiah.jpg" alt="Pastor Elijah Sambiah"> 
+                           
+                        </div>
+                        <div class="leader-info">
+                            <h3>Pastor Elijah Sambiah</h3>
+                            <div class="leader-role">Campus Pastor</div>
+                            <p>Provides spiritual oversight, teaches regularly, and mentors student leaders. Served since 2018.</p>
                         </div>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-tags"></i>
-                        <div class="stat-content">
-                            <h4>Clear</h4>
-                            <p>Pricing Display</p>
+                    
+                    <!-- Leader 2 -->
+                    <div class="leader-card fade-in">
+                        <div class="leader-img">
+                            <!-- ADD YOUR IMAGE HERE -->
+                            <!-- Replace this line with: <img src="images/leaders/deborah-mensah.jpg" alt="Deborah Mensah"> -->
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Deborah Mensah</h3>
+                            <div class="leader-role">Women's Ministry Coordinator</div>
+                            <p>Leads women's fellowship and mentoring programmes. Final-year Law student.</p>
                         </div>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-check-circle"></i>
-                        <div class="stat-content">
-                            <h4>Real-time</h4>
-                            <p>Stock Availability</p>
+                    
+                    <!-- Leader 3 -->
+                    <div class="leader-card fade-in">
+                        <div class="leader-img">
+                            <!-- ADD YOUR IMAGE HERE -->
+                            <!-- Replace this line with: <img src="images/leaders/samuel-boateng.jpg" alt="Samuel Boateng"> -->
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Samuel Boateng</h3>
+                            <div class="leader-role">Worship & Creative Director</div>
+                            <p>Coordinates worship team and creative ministries. Uses arts to glorify God and engage students.</p>
                         </div>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-whatsapp"></i>
-                        <div class="stat-content">
-                            <h4>Instant</h4>
-                            <p>WhatsApp Ordering</p>
+                    
+                    <!-- Leader 4 -->
+                    <div class="leader-card fade-in">
+                        <div class="leader-img">
+                            <!-- ADD YOUR IMAGE HERE -->
+                            <!-- Replace this line with: <img src="images/leaders/grace-ampofo.jpg" alt="Grace Ampofo"> -->
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Grace Ampofo</h3>
+                            <div class="leader-role">Outreach Coordinator</div>
+                            <p>Organises evangelism and community service initiatives. Helps students share their faith practically.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Fragrance Section -->
-        <section class="section fragrance-section" id="fragrance">
-            <div class="section-container">
-                <!-- Section Header -->
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-badge">Premium Collection</div>
-                    <h2 class="section-title">
-                        MYRON DE LUXE <span class="gradient-text">Fragrances</span>
-                    </h2>
-                    <p class="section-subtitle">
-                        Shop 200+ premium fragrances with clear pricing and real-time availability
-                    </p>
-                </div>
-
-                <!-- Enhanced Filter Controls -->
-                <div class="filter-container" data-aos="fade-up" data-aos-delay="50">
-                    <!-- Search -->
-                    <div class="filter-group">
-                        <div class="search-box">
-                            <i class="fas fa-search"></i>
-                            <input type="text" id="productSearch" placeholder="Search products, notes, or tags...">
+        <!-- Services & Activities Section -->
+        <section id="services" class="section section-light">
+            <div class="container">
+                <h2 class="text-center">Services & Activities</h2>
+                
+                <div class="schedule">
+                    <!-- Saturday Service -->
+                    <div class="schedule-item fade-in">
+                        <div class="schedule-time">
+                            <div class="day">Saturday</div>
+                            <div class="time">6:00 PM - 7:30 PM</div>
+                        </div>
+                        <div class="schedule-details">
+                            <h3>Saturday Worship Service</h3>
+                            <p>Uplifting worship, biblical teaching, and fellowship. Our main gathering where we celebrate God's goodness together.</p>
                         </div>
                     </div>
                     
-                    <!-- Category Filter -->
-                    <div class="filter-group">
-                        <select id="categoryFilter" class="filter-select">
-                            <option value="all">All Categories</option>
-                            <option value="unisex">Unisex Perfumes</option>
-                            <option value="men">Men's Fragrances</option>
-                            <option value="women">Women's Fragrances</option>
-                            <option value="diffusers">Diffusers</option>
-                            <option value="body-mist">Body Mists</option>
-                            <option value="oils">Oils</option>
-                            <option value="sets">Gift Sets</option>
-                            <option value="creams">Hand Creams</option>
-                            <option value="candles">Scented Candles</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Price Range -->
-                    <div class="filter-group">
-                        <div class="price-range">
-                            <input type="number" id="minPrice" class="price-input" placeholder="Min GHS" min="0">
-                            <span class="range-separator">to</span>
-                            <input type="number" id="maxPrice" class="price-input" placeholder="Max GHS" min="0">
+                    <!-- Wednesday Fellowship -->
+                    <div class="schedule-item fade-in">
+                        <div class="schedule-time">
+                            <div class="day">Wednesday</div>
+                            <div class="time">6:00 PM - 7:30 PM</div>
+                        </div>
+                        <div class="schedule-details">
+                            <h3>Midweek Fellowship</h3>
+                            <p>Intimate Bible study, prayer, and discussion. Focused on deeper discipleship and mutual encouragement.</p>
                         </div>
                     </div>
                     
-                    <!-- Availability -->
-                    <div class="filter-group">
-                        <select id="availabilityFilter" class="filter-select">
-                            <option value="all">All Products</option>
-                            <option value="in-stock">In Stock Only</option>
-                            <option value="out-of-stock">Out of Stock</option>
-                            <option value="featured">Featured Only</option>
-                        </select>
+                    <!-- Friday Prayer -->
+                    <div class="schedule-item fade-in">
+                        <div class="schedule-time">
+                            <div class="day">Friday</div>
+                            <div class="time">5:30 AM - 6:30 AM</div>
+                        </div>
+                        <div class="schedule-details">
+                            <h3>Early Morning Prayer</h3>
+                            <p>Start your day with prayer and intercession for campus, nation, and personal needs.</p>
+                        </div>
                     </div>
                     
-                    <!-- Sort -->
-                    <div class="filter-group">
-                        <select id="sortProducts" class="filter-select">
-                            <option value="default">Sort By</option>
-                            <option value="price-low">Price: Low to High</option>
-                            <option value="price-high">Price: High to Low</option>
-                            <option value="rating">Highest Rated</option>
-                            <option value="newest">Newest First</option>
-                            <option value="name">Name A-Z</option>
-                            <option value="discount">Best Discount</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Clear Filters -->
-                    <div class="filter-group">
-                        <button class="clear-filters-btn" id="clearFilters">
-                            <i class="fas fa-times"></i> Clear All
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Products Header -->
-                <div class="products-header" data-aos="fade-up" data-aos-delay="100">
-                    <div class="products-count">
-                        <span id="productCount">0 Products</span>
-                        <span id="filteredCount" class="filtered-count"></span>
-                    </div>
-                    <div class="view-controls">
-                        <button class="view-btn active" data-view="grid" aria-label="Grid view">
-                            <i class="fas fa-th"></i>
-                        </button>
-                        <button class="view-btn" data-view="list" aria-label="List view">
-                            <i class="fas fa-list"></i>
-                        </button>
-                        <div class="products-per-page">
-                            <label>Show:</label>
-                            <select id="itemsPerPage" class="page-select">
-                                <option value="12">12</option>
-                                <option value="24">24</option>
-                                <option value="48">48</option>
-                                <option value="100">100</option>
-                            </select>
+                    <!-- Monthly Activities -->
+                    <div class="schedule-item fade-in">
+                        <div class="schedule-time">
+                            <div class="day">Monthly</div>
+                            <div class="time">Varied</div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Products Loading -->
-                <div id="productsLoading" class="loading-state">
-                    <div class="loading-spinner"></div>
-                    <p>Loading products...</p>
-                </div>
-
-                <!-- Products Grid -->
-                <div id="fragranceGallery" class="products-grid grid-view">
-                    <!-- Products loaded dynamically -->
-                </div>
-
-                <!-- No Products Message -->
-                <div id="noProducts" class="no-products" style="display: none;">
-                    <i class="fas fa-search"></i>
-                    <h3>No products found</h3>
-                    <p>Try adjusting your filters or search term</p>
-                    <button class="clear-filters-btn" id="clearFiltersAlt">
-                        Clear All Filters
-                    </button>
-                </div>
-
-                <!-- Pagination -->
-                <div class="pagination" id="pagination">
-                    <button class="page-btn prev-page" disabled aria-label="Previous page">
-                        <i class="fas fa-chevron-left"></i> Previous
-                    </button>
-                    <div class="page-numbers" id="pageNumbers"></div>
-                    <button class="page-btn next-page" aria-label="Next page">
-                        Next <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-
-                <!-- Bulk Order -->
-                <div class="bulk-order" data-aos="fade-up" data-aos-delay="150">
-                    <div class="bulk-order-content">
-                        <div class="bulk-order-icon">
-                            <i class="fas fa-boxes"></i>
-                        </div>
-                        <div class="bulk-order-text">
-                            <h4>Custom Orders</h4>
-                            <p>Can’t find what you’re looking for? We accept custom orders on request. Message us with the details.</p>
-                        </div>
-                        <a href="https://wa.me/233550427241?text=Hello%20MYRON%20DE%20LUXE,%20I%20would%20like%20to%20make%20a%20custom%20order%20for%20an%20item%20not%20currently%20displayed."
-                           class="bulk-order-btn" target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>Send Request</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Stats -->
-                <div class="quick-stats" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-item">
-                        <i class="fas fa-check-circle" style="color: #10B981;"></i>
-                        <div>
-                            <h5>Quality Guaranteed</h5>
-                            <p>100% authentic premium fragrances</p>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-truck" style="color: #3B82F6;"></i>
-                        <div>
-                            <h5>Nationwide Delivery</h5>
-                            <p>Just share your delivery address and we'll deliver anywhere in Ghana</p>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-exchange-alt" style="color: #8B5CF6;"></i>
-                        <div>
-                            <h5>Easy Returns</h5>
-                            <p>7-day return policy on unopened items</p>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-shield-alt" style="color: #F59E0B;"></i>
-                        <div>
-                            <h5>Secure Payment</h5>
-                            <p>Mobile money & bank transfer accepted</p>
+                        <div class="schedule-details">
+                            <h3>Special Events & Outreach</h3>
+                            <p>Evangelism outreaches, community service projects, social events, and leadership training throughout each semester.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Tech Solutions Section -->
-        <section class="section tech-section" id="tech">
-            <div class="section-container">
-                <!-- Section Header -->
-                 <div class="section-header" data-aos="fade-up">
-                    <div class="section-badge tech">Expert Services</div>
-                    <h2 class="section-title">
-                        MYRON DE LUXE <span class="gradient-text tech"></span><span style="
-    background:linear-gradient(90deg,hwb(227 12% 10%),#063f5e);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    display:inline-block;
-    font-weight:600;
-">
-    Tech Solutions
-</span>
-
-                    </h2>
-                    <p class="section-subtitle">
-                        Professional technology services for modern businesses
-                    </p>
-                </div>
-
-                <!-- Services Grid -->
-                <div class="services-grid" id="servicesGrid" data-aos="fade-up" data-aos-delay="50">
-                    <!-- Services loaded dynamically -->
-                </div>
-
-                <!-- Tech Contact -->
-                <div class="tech-contact" data-aos="fade-up" data-aos-delay="100">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-headset"></i>
+        <!-- Sermons & Media Section -->
+        <section id="sermons" class="section section-dark">
+            <div class="container">
+                <h2 class="text-center">Sermons & Teachings</h2>
+                
+                <div class="sermons-grid">
+                    <!-- Sermon 1 -->
+                    <div class="sermon-card fade-in">
+                        <div class="sermon-media">
+                            <!-- MEDIA PLACEHOLDER: Replace with embedded audio/video or thumbnail image later -->
+                            <i class="fas fa-play-circle"></i>
                         </div>
-                        <div class="contact-info">
-                            <h4>Expert Tech Support</h4>
-                            <div class="contact-details">
-                                <p><i class="fas fa-clock"></i> Available: Monday - Saturday, 9AM - 6PM</p>
-                                <p><i class="fas fa-phone"></i> Emergency Support: 24/7 via WhatsApp</p>
-                                <p><i class="fas fa-map-marker-alt"></i> On-site Support: Accra & Surrounding Areas</p>
-                            </div>
-                            <a href="https://wa.me/233208807036" class="tech-whatsapp-btn" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp"></i>
-                                Chat on WhatsApp
-                            </a>
-                            <br> 
-           <p>🔔 Get Website Demos & Updates. <br>
-            Follow our WhatsApp Channel for the latest website demos, features, and announcements.</p>
-                              <a href="https://whatsapp.com/channel/0029VbC7akm4NVicGY7V7s1h" class="tech-whatsapp-btn" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp"></i>
-                                📲 Join WhatsApp Channel
-                            </a>
-                            
+                        <div class="sermon-info">
+                            <div class="sermon-date">April 14, 2024</div>
+                            <h3>Faith in the University Context</h3>
+                            <p>Maintaining vibrant faith while navigating academic pressures and campus life.</p>
+                            <a href="#" class="btn btn-small">Listen Now</a>
                         </div>
+                    </div>
+                    
+                    <!-- Sermon 2 -->
+                    <div class="sermon-card fade-in">
+                        <div class="sermon-media">
+                            <!-- MEDIA PLACEHOLDER: Replace with embedded audio/video or thumbnail image later -->
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="sermon-info">
+                            <div class="sermon-date">April 7, 2024</div>
+                            <h3>The Power of Authentic Community</h3>
+                            <p>How genuine Christian fellowship transforms our spiritual journey.</p>
+                            <a href="#" class="btn btn-small">Listen Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Sermon 3 -->
+                    <div class="sermon-card fade-in">
+                        <div class="sermon-media">
+                            <!-- MEDIA PLACEHOLDER: Replace with embedded audio/video or thumbnail image later -->
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="sermon-info">
+                            <div class="sermon-date">March 31, 2024</div>
+                            <h3>Resurrection Hope for Students</h3>
+                            <p>How Christ's resurrection gives purpose and perspective to studies and future.</p>
+                            <a href="#" class="btn btn-small">Listen Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 3rem;">
+                    <!-- LINK PLACEHOLDER: Add actual YouTube/Google Drive link here later -->
+                    <a href="#" class="btn btn-secondary">View More Sermons</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join / Get Involved Section -->
+        <section id="join" class="section section-light">
+            <div class="container">
+                <h2 class="text-center">Join Our Fellowship</h2>
+          
+                <div class="form-container fade-in">
+    <h3>Sign Up for Campus Ministry</h3>
+    <p>Complete your registration using our Google Form.</p>
+    
+    <a href=" https://forms.gle/VG44ARGemj2ppPjf9" 
+       class="btn btn-primary" 
+       target="_blank" 
+       style="width: 100%; text-align: center; margin-top: 1rem;">
+        Complete Registration Form
+    </a>
+    
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+        <i class="fas fa-external-link-alt"></i> Opens in new window
+    </p>
+</div>
+
+
+             
+                    <div class="involvement-options">
+                        <div class="option-card fade-in">
+                            <h3><i class="fas fa-users"></i> Fellowship Groups</h3>
+                            <p>Join a small group based on your faculty or year for intimate fellowship and accountability.</p>
+                        </div>
+                        
+                        <div class="option-card fade-in">
+                            <h3><i class="fas fa-hands-helping"></i> Volunteering</h3>
+                            <p>Serve in worship team, ushering, media, outreach, hospitality, or prayer ministry.</p>
+                        </div>
+                        
+                        <div class="option-card fade-in">
+                            <h3><i class="fas fa-graduation-cap"></i> Discipleship</h3>
+                            <p>Participate in one-on-one mentoring or discipleship training to grow deeper in faith.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section section-dark">
+            <div class="container">
+                <h2 class="text-center">Ministry Gallery</h2>
+                
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                        <!-- Replace this line with: <img src="images/gallery/worship-service-1.jpg" alt="Worship Service"> -->
+                        <img src="images/gallary/Worship Service.jpg" alt="Worship Service">
+                        <div class="gallery-overlay">Worship Service</div>
+                    </div>
+                    
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                        <!-- Replace this line with: <img src="images/gallery/bible-study-1.jpg" alt="Bible Study"> -->
+                        <img src="images/gallary/Bible Study.jpg" alt="Bible Study">
+                        <div class="gallery-overlay">Bible Study</div>
+                    </div>
+                    
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                        <!-- Replace this line with: <img src="images/gallery/outreach-1.jpg" alt="Outreach"> -->
+                        <img src="images/gallary/Outreach.jpg" alt="Outreach">
+                        <div class="gallery-overlay">Outreach</div>
+                    </div>
+                    
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                       <img src="images/gallary/Fellowship.jpg" alt="Fellowship"> 
+                     
+                        <div class="gallery-overlay">Fellowship</div>
+                    </div>
+                    
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                       <img src="images/gallary/Prayer Meeting.jpg" alt="Prayer Meeting"> 
+                        
+                        <div class="gallery-overlay">Prayer Meeting</div>
+                    </div>
+                    
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                        <img src="images/gallary/Leadership Training.jpg" alt="Leadership Training">
+                        
+                        <div class="gallery-overlay">Leadership Training</div>
+                    </div>
+                    
+                    <!-- Gallery Item 7 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                        <img src="images/gallary/Community Service.jpg" alt="Community Service">
+                       
+                        <div class="gallery-overlay">Community Service</div>
+                    </div>
+                    
+                    <!-- Gallery Item 8 -->
+                    <div class="gallery-item">
+                        <!-- ADD YOUR IMAGE HERE -->
+                        <img src="images/gallary/social_events.jpg" alt="Social Events"> 
+                        
+                        <div class="gallery-overlay">Social Events</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="section contact-section" id="contact">
-            <div class="section-container">
-                <div class="contact-grid" data-aos="fade-up">
-                    <!-- Contact Info -->
-                    <div class="contact-info">
-                        <div class="contact-header">
-                            <h3 class="contact-title">Get in Touch</h3>
-                            <p class="contact-subtitle">Connect with us for premium service</p>
-                        </div>
-
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Location</h5>
-                                    <p>Lakeside Estate, Accra, Ghana</p>
-                                    <small>Nationwide delivery available</small>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Business Hours</h5>
-                                    <p><strong>Fragrances:</strong> Mon-Sat 9AM-6PM</p>
-                                    <p><strong>Tech Support:</strong> Mon-Sat 9AM-6PM</p>
-                                    <p><strong>Emergency:</strong> 24/7 via WhatsApp</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-credit-card"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Payment Methods</h5>
-                                    <div class="payment-methods">
-                                        <span class="payment-method"><i class="fas fa-mobile-alt"></i> Mobile Money</span>
-                                        <span class="payment-method"><i class="fas fa-university"></i> Bank Transfer</span>
-                                        <span class="payment-method"><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- WhatsApp Quick Connect -->
-                        <div class="whatsapp-connect">
-                            <h5>Direct WhatsApp Lines</h5>
-                            <div class="whatsapp-buttons">
-                                <a href="https://wa.me/233550427241" class="whatsapp-contact-btn fragrance" target="_blank" rel="noopener">
-                                    <div class="whatsapp-btn-content">
-                                        <div class="whatsapp-icon">
-                                            <i class="fab fa-whatsapp"></i>
-                                        </div>
-                                        <div class="whatsapp-info">
-                                            <span class="whatsapp-title">Fragrances</span>
-                                            <span class="whatsapp-number">0550427241</span>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="https://wa.me/233208807036" class="whatsapp-contact-btn tech" target="_blank" rel="noopener">
-                                    <div class="whatsapp-btn-content">
-                                        <div class="whatsapp-icon">
-                                            <i class="fab fa-whatsapp"></i>
-                                        </div>
-                                        <div class="whatsapp-info">
-                                            <span class="whatsapp-title">Tech Solutions</span>
-                                            <span class="whatsapp-number">0208807036</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Social Media -->
-                        <div class="social-connect">
-                            <h5>Follow Us</h5>
-                            <div class="social-links">
-                                <a href="https://www.instagram.com/myrondeluxegh" class="social-link instagram" target="_blank" rel="noopener">
-                                    <i class="fab fa-instagram"></i>
-                                    <span></span>
-                                </a>
-                                <a href="https://www.tiktok.com/@myron.de.luxe" class="social-link tiktok" target="_blank" rel="noopener">
-                                    <i class="fab fa-tiktok"></i>
-                                    <span></span>
-                                </a>
-                                
-                            </div>
-                        </div>
+        <section id="contact" class="section section-light">
+            <div class="container">
+                <h2 class="text-center">Contact Us</h2>
+                
+              <!-- Contact Section -->
+<section id="contact" class="section section-light">
+    <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">Connect with us through WhatsApp for immediate responses.</p>
+        
+        <div class="contact-content">
+            <div class="form-container fade-in">
+                <h3><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp Message</h3>
+                
+             
+                
+                <!-- Custom Message Form -->
+                <h4>Send Custom Message</h4>
+                <form id="customWhatsappForm">
+                    <div class="form-group">
+                        <label for="userName">Your Name</label>
+                        <input type="text" id="userName" class="form-control" required>
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="userMessage">Your Message</label>
+                        <textarea id="userMessage" class="form-control" rows="4" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    
+                    <a href="https://wa.me/233XXXXXXXXX" 
+   class="btn btn-accent" 
+   style="width: 100%; display: inline-block; text-align: center;"
+   target="_blank">
+    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+</a>
 
-                    <!-- Contact Form -->
-                    <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
-                        <form id="enquiryForm">
-                            <div class="form-header">
-                                <h4>Send Detailed Enquiry</h4>
-                                <p>We'll respond via WhatsApp within 24 hours</p>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="enquiryType">
-                                    <i class="fas fa-tag"></i> Service Type
-                                </label>
-                                <select id="enquiryType" required>
-                                    <option value="">Select service type</option>
-                                    <optgroup label="Fragrances">
-                                        <option value="fragrance">General Fragrance Enquiry</option>
-                                        <option value="bulk">Bulk/Wholesale Order</option>
-                                        <option value="product-info">Specific Product Info</option>
-                                        <option value="delivery">Delivery Inquiry</option>
-                                    </optgroup>
-                                    <optgroup label="Tech Solutions">
-                                        <option value="computer">Computer Applications</option>
-                                        <option value="web">Web Development</option>
-                                        <option value="hardware">Hardware Systems</option>
-                                        <option value="database">Database Management</option>
-                                        <option value="consultation">Tech Consultation</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="customerType">
-                                    <i class="fas fa-user"></i> You Are
-                                </label>
-                                <select id="customerType">
-                                    <option value="individual">Individual Customer</option>
-                                    <option value="business">Business/Corporate</option>
-                                    <option value="reseller">Reseller/Wholesaler</option>
-                                    <option value="student">Student</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phoneNumber">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp Number
-                                </label>
-                                <div class="phone-input-group">
-                                    <span class="country-code">+233</span>
-                                    <input type="tel" id="phoneNumber" placeholder="XX XXX XXXX" required maxlength="9">
-                                </div>
-                                <small class="helper-text">We'll contact you on this number via WhatsApp</small>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">
-                                    <i class="fas fa-comment"></i> Your Message
-                                </label>
-                                <textarea id="message" rows="4" placeholder="Briefly describe your needs, budget, and timeline..." required></textarea>
-                            </div>
-
-                            <button type="submit" class="submit-btn">
-                                <i class="fab fa-whatsapp"></i>
-                                Send via WhatsApp
-                            </button>
-                        </form>
+                    
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp" style="color: #136230;"></i>
+                    <div>
+                        <h3>WhatsApp Numbers</h3>
+                        <p><strong>Primary:</strong> +233XXXXXXXXX</p>
+                        <p><strong>Alternate:</strong> +233XXXXXXXXX</p>
+                        <p><strong>Hours:</strong> 8:00 AM - 8:00 PM Daily</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>UPSA Auditorium, Block C<br>University of Professional Studies, Accra</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Service Times</h3>
+                        <p>Saturday: 6:00 PM - 7:30 PM</p>
+                        <p>Wednesday: 6:00 PM - 7:00 PM</p>
+                        <p>Friday Prayer: 5:30 AM - 6:30 AM</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h3>Quick Connect</h3>
+                        <p>For urgent matters, WhatsApp is the fastest way to reach us.</p>
+                        <p>Response time: Usually within 1-2 hours</p>
+                    </div>
+                </div>
+                
+                <div class="social-icons">
+                   
+                 
+                </div>
+                
+                <div style="margin-top: 1.5rem; padding: 1rem; background-color: #f8f9fa; border-radius: var(--border-radius);">
+                    <h4 style="color: var(--primary-purple); margin-bottom: 0.5rem;">Response Policy</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-check-circle" style="color: #25D366;"></i> WhatsApp: 1-2 hour response
+                    </p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-check-circle" style="color: #136230;"></i> Calls returned within 24 hours
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                    
+               <div class="text-center" style="margin-top: 3rem;">
+    <h3>Follow Us on Social Media</h3>
+    <div class="social-media-links fade-in">
+        <div class="social-icons" style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VbCE4tM0rGiMxQBAVm3v" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -696,157 +537,47 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <!-- Footer Top -->
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="#home" class="footer-logo">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M20 2L38 12V28L20 38L2 28V12L20 2Z" fill="var(--primary)"/>
-                            <path d="M20 14L28 18V22L20 26L12 22V18L20 14Z" fill="white"/>
-                        </svg>
-                        <div class="footer-logo-text">
-                            <span>MYRON DE LUXE</span>
-                            <small>Experience the difference</small>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">✝</div>
+                        <div>
+                            <div class="logo-text">Agape House New Testament Church</div>
+                            <div class="logo-subtext">UPSA Campus Ministry</div>
                         </div>
-                    </a>
-                    <p class="footer-tagline">
-                        Premium quality fragrances with transparent pricing
-                    </p>
+                    </div>
+                    <p class="footer-encouragement">"Let us not give up meeting together, as some are in the habit of doing, but let us encourage one another." — Hebrews 10:25</p>
                 </div>
-
+                
                 <div class="footer-links">
-                    <div class="link-column">
-                        <h5>Fragrances</h5>
-                        <a href="#fragrance" data-scroll="fragrance">All Products</a>
-                        <a href="#fragrance" data-scroll="fragrance">Featured Items</a>
-                        <a href="#fragrance" data-scroll="fragrance">New Arrivals</a>
-                        <a href="#fragrance" data-scroll="fragrance">Best Sellers</a>
-                    </div>
-                    <div class="link-column">
-                        <h5>Tech Solutions</h5>
-                        <a href="#tech" data-scroll="tech">Computer Apps</a>
-                        <a href="#tech" data-scroll="tech">Web Development</a>
-                        <a href="#tech" data-scroll="tech">Hardware Systems</a>
-                        <a href="#tech" data-scroll="tech">Database Management</a>
-                    </div>
-                    <div class="link-column">
-                        <h5>Support</h5>
-                        <a href="#contact" data-scroll="contact">Contact Us</a>
-                        <a href="#fragrance" data-scroll="fragrance">Track Order</a>
-                        <a href="#" id="privacyModal">Privacy Policy</a>
-                        <a href="#" id="termsModal">Terms of Service</a>
-                    </div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#sermons">Sermons</a></li>
+                        <li><a href="#join">Join Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-service-times">
+                    <h3>Service Times</h3>
+                    <p><strong>Saturday Service:</strong> 6:00 PM</p>
+                    <p><strong>Venue:</strong> AgapeLand, Pawpaw Street, East Legon, Accra.</p>
+                    <p><strong>Midweek Fellowship:</strong> Wed, 6:00 PM</p>
+                    <p><strong>Morning Prayer:</strong> Fri, 5:30 AM</p>
+                    <p><strong>Venue:</strong> UPSA Auditorium, Block C</p>
                 </div>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="copyright">
-                    &copy; 2025 MYRON DE LUXE. All rights reserved.
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/myrondeluxegh" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@myron.de.luxe" class="social-link" aria-label="TikTok" target="_blank" rel="noopener">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-                <div class="footer-note">
-                    All orders handled securely via WhatsApp
-                </div>
+            
+            <div class="copyright">
+                <p>© 2026 MYRON DE LUXE TECH SOLUTIONS. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Modals -->
-    <div class="modal" id="productModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-body" id="modalBody">
-                <!-- Product details loaded dynamically -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Notification -->
-    <div class="notification" id="notification"></div>
-
-<!-- Cart Modal -->
-<div id="cartModal" class="cart-modal">
-    <div class="cart-header">
-        <h3 class="cart-title">Shopping Cart</h3>
-        <button id="cartClose" class="cart-close">&times;</button>
-    </div>
-    <div class="cart-content">
-        <div id="emptyCart" class="empty-cart" style="display: none;">
-            <i class="fas fa-shopping-cart"></i>
-            <h3>Your cart is empty</h3>
-            <p>Add some fragrances to get started!</p>
-        </div>
-        <div id="cartItems"></div>
-    </div>
-    <div id="cartSummary" class="cart-summary" style="display: none;">
-        <div class="summary-row">
-            <span>Subtotal</span>
-            <span id="cartSubtotal">GHS 0.00</span>
-        </div>
-        <div class="summary-row">
-            <span>Shipping</span>
-            <span id="cartShipping">GHS 0.00</span>
-        </div>
-        <div class="summary-row total">
-            <span>Total</span>
-            <span id="cartTotalAmount">GHS 0.00</span>
-        </div>
-        <div class="cart-actions">
-            <button id="clearCart" class="btn btn-outline">Clear Cart</button>
-            <button id="checkoutBtn" class="btn btn-primary">Checkout on WhatsApp</button>
-        </div>
-    </div>
-</div>
-
-<!-- Cart Overlay -->
-<div id="cartOverlay" class="cart-overlay"></div>
-
-
-
-    <!-- Scripts -->
-    <script src="js/main.js" defer></script>
-    <script src="data/products.json" defer></script>
-    <script src="js/analytics.js" defer></script>
-    
-    <!-- Lazy loading for non-critical assets -->
-    <script>
-        // Load non-critical CSS
-        function loadNonCriticalCSS() {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'css/animations.css';
-            document.head.appendChild(link);
-        }
-        window.addEventListener('load', loadNonCriticalCSS);
-        
-        // Initialize social media tracking
-        document.addEventListener('DOMContentLoaded', function() {
-            // Track social media clicks
-            const socialLinks = document.querySelectorAll('.footer-social .social-link');
-            socialLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const platform = this.getAttribute('aria-label').toLowerCase();
-                    console.log(`Social media clicked: ${platform}`);
-                    // Add your analytics tracking here
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
